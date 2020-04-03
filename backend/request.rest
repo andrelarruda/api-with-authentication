@@ -6,8 +6,8 @@ POST http://localhost:3333/auth/register HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Adriano",
-    "email": "adrianolucio10@gmail.com",
+    "name": "fulano",
+    "email": "fulano@email.com",
     "password": "123456"
 }
 
@@ -16,14 +16,14 @@ POST http://localhost:3333/auth/authenticate HTTP/1.1
 content-type: application/json
 
 {
-    "email": "andrebass27@gmail.com",
-    "password": "85851220"
+    "email": "fulano@email.com",
+    "password": "123456"
 }
 
 ###
 GET http://localhost:3333/projects/ HTTP/1.1
 
-### Send mail
+### Teste de envio de email para MailTrap (via package node-mailer)
 GET http://localhost:3333/mail/sendMail HTTP/1.1
 
 ### forgot_password (envia token por email)
@@ -31,7 +31,7 @@ POST http://localhost:3333/auth/forgot_password HTTP/1.1
 Content-Type: application/json
 
 {
-   "email": "andrebass27@gmail.com"
+   "email": "fulano@email.com"
 }
 
 ### reset_password (pega o token e troca a senha)
@@ -39,7 +39,7 @@ POST http://localhost:3333/auth/reset_password HTTP/1.1
 Content-Type: application/json
 
 {
-   "email": "andrebass27@gmail.com",
+   "email": "fulano@email.com",
    "token": "e9e154b154afc132b1fb38a534d31dd59ba7560b",
-   "password": "123456"
+   "password": "654321"
 }
