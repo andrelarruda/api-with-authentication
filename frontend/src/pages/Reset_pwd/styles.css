@@ -1,0 +1,13 @@
+.container p {
+   font-size: 16px;
+   text-align: center;
+}
+
+.container p .subtitle {
+   margin-bottom: 20px;
+}
+
+.container form input {
+   margin-top: 8px;
+   margin-bottom: 20px;
+}

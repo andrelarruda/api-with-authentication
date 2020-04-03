@@ -1,0 +1,21 @@
+.container p {
+   font-size: 16px;
+   text-align: center;
+}
+
+.container p.subtitle {
+   margin-bottom: 20px;
+}
+
+.container form input {
+   margin-bottom: 12px;
+}
+
+.container form p {
+   margin-bottom: 0px;
+}
+
+.container form .back-link {
+   font-size: 14px;
+   margin-top: 8px;
+}

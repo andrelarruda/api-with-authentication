@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/sendMail', async (req, res) => {
    try{
       const mailOptions = {
-         from: '"Development team" <andrebass27@gmail.com>',
+         from: '"Development team" <aplicacaobackend@test.com>',
          to: 'andre_bass27@hotmail.com, andre.arruda@seedabit.org.br',
          subject: 'Nice Nodemailer Test',
          text: "Hey there, it's our first message sent with Nodemailer ;)",

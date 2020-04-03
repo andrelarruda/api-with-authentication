@@ -1,0 +1,46 @@
+.main-container {
+   width: auto;
+   height: 100%;
+   background: rgba(51, 164, 200, 0.8);
+}
+
+.main-container .sub-container {
+   width: auto;
+   min-height: 520px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding-top: 100px;
+}
+
+.main-container .sub-container h1 {
+   font-size: 42px;
+   margin-bottom: 40px;
+}
+
+.main-container .sub-container p {
+   font-size: 24px;
+}
+
+.logout-button {
+   width: 200px;
+   height: 35px;
+   margin-top: 8px;
+   background: #266fa5;
+   border-radius: 20px;
+   align-items: center;
+   color: #FFF;
+   font-weight: bold;
+   /* até aqui, mesmas props que o button */
+   display: flex;
+   border-style: solid;
+   justify-content: center;
+   font-size: 18px;
+   text-decoration: none;
+   transition: opacity 0.2s;
+}
+
+.logout-button:hover {
+   opacity: 0.8;
+}

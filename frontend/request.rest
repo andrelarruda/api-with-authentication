@@ -1,0 +1,45 @@
+GET http://localhost:3333
+
+
+### Registrar
+POST http://localhost:3333/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "André testador",
+    "email": "email@test.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:3333/auth/authenticate HTTP/1.1
+content-type: application/json
+
+{
+    "email": "andrejuca4@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:3333/projects/ HTTP/1.1
+
+### Send mail
+GET http://localhost:3333/mail/sendMail HTTP/1.1
+
+### forgot_password (envia token por email)
+POST http://localhost:3333/auth/forgot_password HTTP/1.1
+Content-Type: application/json
+
+{
+   "email": "andrebass27@gmail.com"
+}
+
+### reset_password (pega o token e troca a senha)
+POST http://localhost:3333/auth/reset_password HTTP/1.1
+Content-Type: application/json
+
+{
+   "email": "andrebass27@gmail.com",
+   "token": "e9e154b154afc132b1fb38a534d31dd59ba7560b",
+   "password": "123456"
+}

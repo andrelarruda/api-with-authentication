@@ -32,9 +32,9 @@ router.post('/register', async (req, res) => {
       user.password = undefined;
 
       return res.status(201).send({ 
-         user,
+         id: user.id,
          // token gerado no registro para que o usuário não precise ir para tela de login. Neste caso, o usuário já loga automaticamente ao efetuar o registro.
-         token: generateToken( { id: user.id }),
+         //token: generateToken( { id: user.id }),
       });
 
    } catch (err) {
@@ -57,8 +57,8 @@ router.post('/authenticate', async (req, res) => {
 
    user.password = undefined;
    return res.send({ 
-      message: "Login Successful.", 
-      user, 
+      name: user.name,
+      email: user.email, 
       token: generateToken( { id: user.id }),
    });
 });
@@ -71,7 +71,7 @@ router.post('/forgot_password', async (req, res) => {
       const user = await User.findOne({ email });
 
       if (!user){
-         return res.status(400).send({ error: "User not found." });
+         return res.status(404).send({ error: "User not found." });
       }
 
       // gera um token de 20 caracteres e transforma em hexadecimal
@@ -91,14 +91,14 @@ router.post('/forgot_password', async (req, res) => {
       //enviar para o usuário um email com a rota de reset do password
       const response = await mailer.sendMail({
          to: email,
-         from: "andrebass27@gmail.com",
+         from: "aplicacaobackend@test.com",
          // template: 'auth/forgot_password',
          // context: manda as variáveis pro arquivo html.
          // context: { token }
          subject: "It seems like you've requested a password reset",
          text: `If you've made this request, please copy out following token: ${token}.\n If you didn't, ignore it out.`,
       });
-      return res.send();
+      return res.send(response);
 
    } catch(err) {
       console.log(err)
