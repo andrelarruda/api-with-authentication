@@ -1,17 +1,26 @@
-const path = require('path');
-const nodemailer = require('nodemailer');
-const hbs = require('nodemailer-express-handlebars');
+const sdMail = require("@sendgrid/mail");
 
-const { host, port, user, pass } = require('../config/mail.json');
+sdMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const transport = nodemailer.createTransport({
-   host,
-   port,
-   auth: {
-      user,
-      pass
-   }
-});
+module.exports = sdMail;
+
+// Para enviar com nodemailer (para o MailTrap):
+// necessário instalar (npm install --save nodemailer)
+
+// const nodemailer = require("nodemailer");
+
+// const { host, port, user, pass } = require("../config/mail.json");
+
+// const transport = nodemailer.createTransport({
+//    host,
+//    port,
+//    auth: {
+//       user,
+//       pass,
+//    },
+// });
+
+// module.exports = transport;
 
 // transport.use('compile', hbs({
 //    // viewEngine: 'handlebars',
@@ -26,9 +35,6 @@ const transport = nodemailer.createTransport({
 //    viewPath: path.resolve('.src/resources/mail'),
 //    extName: '.html'
 // }));
-
-
-module.exports = transport;
 
 // original de node_modules/express-handlebars/lib/express-handlebars.js:
 // handlebars     : Handlebars,
