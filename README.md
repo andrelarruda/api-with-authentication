@@ -17,5 +17,3 @@ With this project I could improve my ReactJS and NodeJS skills.
 
   1. [nodemailer](https://nodemailer.com/about/). This library was used just for test purposes. Every email is delivered to a testing server called [mailtrap](https://mailtrap.io/).
   2. In production I used [SendGrid](https://sendgrid.com/) that sends emails to real email accounts.
-
-Developed by [André Arruda](https://www.linkedin.com/in/andr%C3%A9-arruda-786b45192/) ![](https://avatars0.githubusercontent.com/u/21086939?v=4)
