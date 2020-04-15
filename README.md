@@ -14,6 +14,5 @@ With this project I could improve my ReactJS and NodeJS skills.
 - Hashing password with [bcrypt](https://www.npmjs.com/package/bcrypt);
 - Authentication with [JWT](https://jwt.io/)
 - Email sending with:
-
-1. [nodemailer](https://nodemailer.com/about/). This library was used just for test purposes. Every email is delivered to a testing server called [mailtrap](https://mailtrap.io/).
-2. In production I used [SendGrid](https://sendgrid.com/) that sends emails to real email accounts.
+  1. [nodemailer](https://nodemailer.com/about/). This library was used just for test purposes. Every email is delivered to a testing server called [mailtrap](https://mailtrap.io/).
+  2. In production I used [SendGrid](https://sendgrid.com/) that sends emails to real email accounts.
